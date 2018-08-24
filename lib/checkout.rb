@@ -18,4 +18,7 @@ class Checkout
     end
     return total
   end
+
+  def promo_total()
+  end
 end
