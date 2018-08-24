@@ -12,5 +12,10 @@ class Checkout
   end
 
   def total()
+    total = 0
+    for item in @basket do
+      total += item["Price"]
+    end
+    return total
   end
 end
