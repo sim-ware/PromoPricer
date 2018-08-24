@@ -7,7 +7,8 @@ class Checkout
     @basket
   end
 
-  def scan()
+  def scan(item)
+    @basket.push(item)
   end
 
   def total()
