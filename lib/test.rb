@@ -11,9 +11,13 @@ co.scan(item2)
 co.scan(item1)
 co.scan(item3)
 
-total = 0
-for item in co.basket do
-  # puts item
+# total = 0
+# for item in co.basket do
+#   # puts item
+#   total += item["Price"]
+# end
+
+co.basket.each do |item|
   total += item["Price"]
 end
 
