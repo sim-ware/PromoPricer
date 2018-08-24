@@ -6,10 +6,10 @@ describe Checkout do
     @Checkout = Checkout.new
   end
 
-  describe ".new" do
+  describe ".initialize" do
     context "Creates a new Checkout Object" do
-      it "" do
-      
+      it "should have an empty Basket Array" do
+        expect(@Checkout.basket).to eql([])
       end
     end
   end

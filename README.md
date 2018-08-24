@@ -12,6 +12,23 @@ Ruby BackEnd code for applying Promotions at Checkout.
 - Code Checkout
 - Code optional promo (separately)
 
+## Coding Checkout
+```
+co = Checkout​.new​(promotional_rules)
+co​.scan​(item)
+co​.scan​(item)
+price = co​.total
+```
+Methods:
+- .scan // Should add Item to the Basket.
+- .total // Should add the Basket's Item's Prices.
+
+Variables:
+- promotional_rules // should apply promotional rules to the total price somehow.
+- item // the item's hash.
+
+## Example Output
+
 ```
 Test data
 ---------
