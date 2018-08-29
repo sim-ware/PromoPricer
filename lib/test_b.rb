@@ -32,13 +32,3 @@ co.scan(item3)
 puts co.basket
 puts co.total
 puts co.basket
-# puts co.promo
-
-
-# Call the Over 60 Method on it
-# puts co.promo.over_sixty(co.total)
-
-
-# Call the Multiple Chair method on it
-# co.promo.multiple_chairs(co.basket)
-# puts co.basket
