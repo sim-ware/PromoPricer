@@ -22,9 +22,10 @@ describe Checkout do
     context "Applies Promo Rule if Total is greater than 60" do
       it "should take 10% off the total" do
         co = Checkout.new(@Promotional_rules)
-        # expect(@Checkout.basket).to eql([{"ProductCode" => 001,
-        #                                   "Name" => "Very Cheap Chair",
-        #                                   "Price" => 9.25}])
+        co.scan(@Db.class::DATA[0])
+        co.scan(@Db.class::DATA[1])
+        co.scan(@Db.class::DATA[2])
+        expect(co.total).to eql(66.78)
       end
     end
   end
@@ -32,10 +33,20 @@ describe Checkout do
   describe ".multiple_chairs" do
     context "Applies Promo Rule if 2 or more 'Very Cheap Chairs' in Basket" do
       it "should change the price to 8.5" do
-        # @Checkout.scan(@Db.class::DATA[0])
-        # @Checkout.scan(@Db.class::DATA[1])
-        # @Checkout.scan(@Db.class::DATA[2])
-        # expect(@Checkout.total).to eql(74.2)
+        co = Checkout.new(@Promotional_rules)
+        co.scan(@Db.class::DATA[0])
+        co.scan(@Db.class::DATA[0])
+        co.scan(@Db.class::DATA[0])
+        expect(co.basket[0]["Price"]).to eql(8.5)
+      end
+    end
+    context "Don't Apply Promo Rule if 1 or less 'Very Cheap Chairs' in Basket" do
+      it "should not change the price" do
+        co = Checkout.new(@Promotional_rules)
+        co.scan(@Db.class::DATA[0])
+        co.scan(@Db.class::DATA[1])
+        co.scan(@Db.class::DATA[2])
+        expect(co.basket[0]["Price"]).to eql(9.25)
       end
     end
   end
