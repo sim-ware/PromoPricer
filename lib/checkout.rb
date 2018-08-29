@@ -19,16 +19,16 @@ class Checkout
 
   def total()
     total = 0
-    if @promo != false
-      @promo.multiple_chairs(@basket)
-    end
+    
+    if @promo != false then @promo.multiple_chairs(@basket) end
+
     @basket.each do |item|
       total += item["Price"]
     end
-    if @promo != false
-      total = @promo.over_sixty(total)
-    end
+
+    if @promo != false then total = @promo.over_sixty(total) end
+
     return total.round(2)
   end
-  
+
 end
