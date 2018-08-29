@@ -9,18 +9,35 @@ item3 = {"ProductCode" => 003, "Name" => "Funky Light", "Price" => 19.95}
 
 promotional_rules = Promo.new
 co = Checkout.new(promotional_rules)
-co.scan(item2)
-co.scan(item1)
 
-puts co.basket
+# TEST1
+co.scan(item1)
+co.scan(item2)
+co.scan(item3)
+
+# TEST2
+# co.scan(item1)
+# co.scan(item3)
+# co.scan(item1)
+
+# TEST3
+# co.scan(item1)
+# co.scan(item2)
+# co.scan(item1)
+# co.scan(item3)
+
+
+
+# puts co.basket
 puts co.total
-puts co.promo
+# puts co.basket
+# puts co.promo
 
 
 # Call the Over 60 Method on it
-puts co.promo.over_sixty(co.total)
+# puts co.promo.over_sixty(co.total)
 
 
 # Call the Multiple Chair method on it
-co.promo.multiple_chairs(co.basket)
-puts co.basket
+# co.promo.multiple_chairs(co.basket)
+# puts co.basket

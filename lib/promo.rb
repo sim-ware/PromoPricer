@@ -2,8 +2,8 @@ class Promo
   def over_sixty(total)
     if total > 60
     total = total * 0.9
-    total = total.round(2)
     end
+    return total
   end
 
   def multiple_chairs(basket)
