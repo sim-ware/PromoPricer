@@ -1,4 +1,5 @@
 class Db
+
   DATA = [
     {
       "ProductCode" => 001,
@@ -16,4 +17,5 @@ class Db
       "Price" => 19.95
     }
     ]
+    
 end

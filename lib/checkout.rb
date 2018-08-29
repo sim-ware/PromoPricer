@@ -1,4 +1,5 @@
 class Checkout
+
   def initialize(promo = false)
     @basket = []
     @promo = promo
@@ -29,4 +30,5 @@ class Checkout
     end
     return total.round(2)
   end
+  
 end

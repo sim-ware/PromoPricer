@@ -1,4 +1,5 @@
 class Promo
+
   def over_sixty(total)
     if total > 60
     total = total * 0.9
@@ -14,4 +15,5 @@ class Promo
        basket[0]["Price"]=8.5
     end
   end
+  
 end
