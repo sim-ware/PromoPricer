@@ -1,10 +1,15 @@
 class Checkout
-  def initialize()
+  def initialize(promo = false)
     @basket = []
+    @promo = promo
   end
 
   def basket
     @basket
+  end
+
+  def promo
+    @promo
   end
 
   def scan(item)
@@ -12,6 +17,8 @@ class Checkout
   end
 
   def total()
+    # FIND OUT IF PROMOTIONAL_RULES IS ENABLED, IF SO CALL PROMO_TOTAL HERE
+    # INSTEAD
     total = 0
     for item in @basket do
       total += item["Price"]
@@ -20,5 +27,6 @@ class Checkout
   end
 
   def promo_total()
+    # SIMPLE CALL TO USE PROMOTIONAL RULES HERE INSTEAD
   end
 end

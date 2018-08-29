@@ -16,6 +16,24 @@ describe Checkout do
     end
   end
 
+  describe ".initialize" do
+    context "Can Init without setting Promo" do
+      it "should have a false @promo attribute" do
+        co = Checkout.new
+        expect(co.promo).to eql(false)
+      end
+    end
+  end
+
+  describe ".initialize" do
+    context "Can Init with a Promo Object" do
+      it "should have a Promo Object as @promo attribute" do
+        co = Checkout.new('Samir')
+        expect(co.promo).to eql('Samir')
+      end
+    end
+  end
+
   describe ".scan" do
     context "Adds an Item to the Basket" do
       it "should add an Item Hash to the Basket Array" do

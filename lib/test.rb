@@ -8,7 +8,7 @@ item3 = {"ProductCode" => 003, "Name" => "Funky Light", "Price" => 19.95}
 co = Checkout.new
 co.scan(item1)
 co.scan(item2)
-co.scan(item1)
+# co.scan(item1)
 co.scan(item3)
 
 # REGULAR TOTAL
@@ -39,6 +39,7 @@ end
 
 if promo_total > 60
 promo_total = promo_total * 0.9
+promo_total = promo_total.round(2)
 end
 
 puts promo_total
