@@ -21,7 +21,7 @@ For the Task, I first thought about the product sample, and thought the products
 Next, I coded the checkout class. I thought to do this before coding the promotional rules, as the specs stated to have a flexible solution in case those rules change. Following the example, I coded a __scan()__ method for adding items to a basket, and a __total()__ method for returning a price.
 
 Finally, I coded another class to apply the promotional rules. I thought to code a class around this, called 'promo', as it seemed a simple way to contain both the methods, and it seemed easier to me to be able to pass a 'promo' object as an optional argument when instantiating a 'checkout', rather than find a way to optionally require a module. Also, putting the 'promo' into a class made it easier to isolate and test the functionality.
-## Coding Checkout
+## Example Interface
 ```
 co = Checkout​.new​(promotional_rules)
 co​.scan​(item)
