@@ -15,7 +15,7 @@ class Checkout
   def scan(item)
     @basket.push(item)
   end
-################################################################################
+
   def total()
     total = 0
     if @promo != false
@@ -29,5 +29,4 @@ class Checkout
     end
     return total.round(2)
   end
-################################################################################
 end
