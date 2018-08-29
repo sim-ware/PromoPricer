@@ -2,6 +2,10 @@
 Ruby BackEnd code for applying Promotions at Checkout.
 ## To Run
 First clone the repository, and 'cd' into it.
+Install necessary dependencies by running:
+```
+bundle install
+```
 To run the tests, from the main directory, run:
 ```
 rspec -fd
