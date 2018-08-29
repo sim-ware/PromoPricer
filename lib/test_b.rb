@@ -9,6 +9,7 @@ item3 = {"ProductCode" => 003, "Name" => "Funky Light", "Price" => 19.95}
 
 promotional_rules = Promo.new
 co = Checkout.new(promotional_rules)
+# co = Checkout.new()
 
 # TEST1
 co.scan(item1)
@@ -28,9 +29,9 @@ co.scan(item3)
 
 
 
-# puts co.basket
+puts co.basket
 puts co.total
-# puts co.basket
+puts co.basket
 # puts co.promo
 
 
